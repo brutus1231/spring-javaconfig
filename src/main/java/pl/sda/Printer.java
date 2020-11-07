@@ -1,11 +1,6 @@
 package pl.sda;
 
-import org.springframework.stereotype.Component;
+public interface Printer {
 
-@Component
-public class Printer {
-
-    public void print(String message) {
-        System.out.println(message);
-    }
+    void print(String message);
 }
