@@ -6,10 +6,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class HelloWorldImpl implements HelloWorld {
 
-    @Autowired                  //wstrzykniecie po polu
-    private Printer printer;
+    private final Printer printer;
 
-    //TODO po konstruktorze autowired zamiast po polu
+    public HelloWorldImpl(Printer printer) {
+        this.printer = printer;
+    }
 
     public void print(String message) {
         printer.print(message);
