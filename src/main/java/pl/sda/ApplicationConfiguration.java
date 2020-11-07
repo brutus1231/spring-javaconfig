@@ -8,8 +8,8 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan("pl.sda")
 public class ApplicationConfiguration {
 
-/*    @Bean
-    public HelloWorld helloWorld() {
+    @Bean
+    public HelloWorld helloWorldBean() {
         return new HelloWorldImpl();
-    }*/
+    }
 }
