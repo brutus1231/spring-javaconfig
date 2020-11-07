@@ -9,13 +9,12 @@ public class Main {
         ApplicationContext context =
                 new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
 
-
         printAllBeans(context);
     }
 
     private static void printAllBeans(ApplicationContext context) {
         String[] beanDefinitionNames = context.getBeanDefinitionNames();
-        for(String beanName : beanDefinitionNames){
+        for (String beanName : beanDefinitionNames) {
             System.out.println(beanName);
         }
     }
