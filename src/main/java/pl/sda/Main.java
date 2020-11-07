@@ -9,7 +9,7 @@ public class Main {
         ApplicationContext context =
                 new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
 
-        HelloWorld helloWorld = context.getBean(HelloWorld.class);
+        HelloWorld helloWorld = context.getBean("helloWorldImpl", HelloWorld.class);
         helloWorld.print("Ala ma kota");
         printAllBeans(context);
     }

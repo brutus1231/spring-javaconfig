@@ -1,5 +1,6 @@
 package pl.sda;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -8,8 +9,11 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan("pl.sda")
 public class ApplicationConfiguration {
 
-//    @Bean
-//    public HelloWorld helloWorldBean() {
-//        return new HelloWorldImpl();
-//    }
+    @Autowired
+    PrinterImpl printer;
+
+    @Bean
+    public HelloWorld helloWorldBean() {
+        return new HelloWorldImpl(printer);
+    }
 }
